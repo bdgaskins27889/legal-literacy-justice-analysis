@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitations & Future Research</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep required min-height */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* keep title top padding */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        /* Wider content area to reduce text wrapping and lower height */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px; /* reduced */
+            padding-left: 36px; /* reduced to give more text width */
+            padding-right: 36px;
+            align-items: start;
+            row-gap: 18px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-header {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            margin-bottom: 12px; /* reduced */
+            padding-bottom: 8px;
+            border-bottom: 1px solid #E0E0E0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .col-header.future {
+            color: #800020;
+            border-bottom-color: #800020;
+        }
+
+        .point-block {
+            margin-bottom: 12px; /* reduced */
+        }
+
+        .point-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            color: #1A1A1A;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .point-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.35; /* slightly tighter to save space */
+            margin: 0;
+        }
+
+        .future .point-title {
+            color: #800020;
+        }
+
+        .number-marker {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            color: #999;
+            border: 1px solid #E0E0E0;
+            padding: 2px 6px; /* slightly smaller */
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .future .number-marker {
+            color: #800020;
+            border-color: #800020;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>This Study Is a Foundation, Not a Final Word</h1>
+        </div>
+
+        <div class="content-grid">
+            <!-- Limitations Column -->
+            <div class="column">
+                <div class="col-header">
+                    Current Limitations
+                </div>
+
+                <div class="point-block">
+                    <div class="point-title"><span class="number-marker">01</span>Federal vs. State Scope</div>
+                    <div class="point-text">
+                        Focused on federal data; state courts (where most cases occur) may show different patterns.
+                    </div>
+                </div>
+
+                <div class="point-block">
+                    <div class="point-title"><span class="number-marker">02</span>Proxy Variables</div>
+                    <div class="point-text">
+                        Representation type is a proxy and doesn’t capture individual attorney resources or experience.
+                    </div>
+                </div>
+
+                <div class="point-block">
+                    <div class="point-title"><span class="number-marker">03</span>Observational Nature</div>
+                    <div class="point-text">
+                        Unobserved factors (e.g., evidence strength) limit strict causal claims despite controls.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Research Column -->
+            <div class="column">
+                <div class="col-header future">
+                    Future Research
+                </div>
+
+                <div class="point-block future">
+                    <div class="point-title"><span class="number-marker">01</span>State-Level Replication</div>
+                    <div class="point-text">
+                        Apply models to state systems to test whether geographic bias reduction holds locally.
+                    </div>
+                </div>
+
+                <div class="point-block future">
+                    <div class="point-title"><span class="number-marker">02</span>NLP Analysis of Transcripts</div>
+                    <div class="point-text">
+                        Use NLP on transcripts to detect linguistic biases missed by structured data.
+                    </div>
+                </div>
+
+                <div class="point-block future">
+                    <div class="point-title"><span class="number-marker">03</span>Longitudinal Impact</div>
+                    <div class="point-text">
+                        Track recidivism to assess whether fairer sentencing yields better long‑term outcomes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding 2: Attorney Type</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* keep upper padding */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 20px;
+            margin-bottom: 28px; /* reduced from 40px to save height */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #4A4A4A;
+            margin-top: 10px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            gap: 24px; /* reduced from 40px */
+            padding-left: 60px;
+            padding-right: 60px;
+            flex-grow: 1;
+            align-items: start;
+        }
+
+        .data-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .stat-row {
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 6px; /* reduced from 8px */
+        }
+
+        .stat-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .stat-diff {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #800020;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .highlight-box {
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+            padding: 10px; /* reduced from 12px */
+            margin-top: 12px; /* reduced from 16px */
+            border-left: 6px solid #800020;
+        }
+
+        .highlight-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            line-height: 1.3;
+        }
+
+        .image-container {
+            height: 400px; /* reduced from 450px to cut overall height */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: #FAFAFA;
+            border: 1px solid #EEEEEE;
+            padding: 16px; /* reduced from 20px */
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Attorney Type Predicts Sentence Length</h1>
+            <h2>Defendants Without Private Attorneys Serve an Average of 35 More Months</h2>
+        </div>
+
+        <div class="content-grid">
+            <div class="data-panel">
+                <div class="stat-row">
+                    <span class="stat-label">Private Attorney</span>
+                    <span class="stat-value">53.2 <span style="font-size: 20px; color: #4A4A4A;">months</span></span>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Public Defender</span>
+                    <div>
+                        <span class="stat-value">78.4 <span style="font-size: 20px; color: #4A4A4A;">months</span></span>
+                        <span class="stat-diff">+25.2 months</span>
+                    </div>
+                </div>
+
+                <div class="stat-row">
+                    <span class="stat-label">Pro Se (Self-Represented)</span>
+                    <div>
+                        <span class="stat-value">88.1 <span style="font-size: 20px; color: #4A4A4A;">months</span></span>
+                        <span class="stat-diff">+34.9 months</span>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <div class="highlight-text">
+                        Gap is nearly three years.
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="/home/ubuntu/legal_literacy_justice_project/outputs/models/roc_curve_prison.png" alt="Average Sentence Length by Attorney Type">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

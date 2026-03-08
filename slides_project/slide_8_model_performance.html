@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Performance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* keep title upper padding */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 16px; /* slightly reduced to save vertical space */
+            margin-bottom: 12px; /* reduced to save vertical space */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        .content-wrapper {
+            padding-left: 60px;
+            padding-right: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* reduced gap */
+            flex-grow: 1;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px; /* reduced */
+        }
+
+        .metric-card {
+            border: 1px solid #E0E0E0;
+            padding: 10px; /* reduced inner padding */
+            display: flex;
+            flex-direction: column;
+            background-color: #FAFAFA;
+        }
+
+        .metric-card.highlight {
+            background-color: #FFFFFF;
+            border: 2px solid #800020;
+            position: relative;
+        }
+
+        .metric-card.highlight::after {
+            content: "HIGHEST ACCURACY";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #800020;
+            color: #FFFFFF;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            padding: 4px 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .model-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 6px;
+        }
+
+        .stat-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #1A1A1A;
+            font-weight: 700;
+        }
+
+        .highlight .stat-value {
+            color: #800020;
+        }
+
+        /* Shrunk image area to prevent overflow (calculated to keep page under 720px)") */
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FAFAFA;
+            border: 1px solid #E0E0E0;
+            padding: 8px; /* reduced */
+            max-height: 120px; /* reduced to avoid overflow */
+            overflow: hidden; /* ensure image cannot push container */
+            flex: none; /* do not expand */
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .caption {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-top: 4px; /* reduced */
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>All Three Models Achieve Strong Predictive Accuracy</h1>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="model-name">Logistic Regression</div>
+                    <div class="stat-group">
+                        <span class="stat-label">Accuracy</span>
+                        <span class="stat-value">77.2%</span>
+                    </div>
+                    <div class="stat-group">
+                        <span class="stat-label">AUC-ROC</span>
+                        <span class="stat-value">0.87</span>
+                    </div>
+                </div>
+
+                <div class="metric-card highlight">
+                    <div class="model-name">Multilevel Model</div>
+                    <div class="stat-group">
+                        <span class="stat-label">Accuracy</span>
+                        <span class="stat-value">77.8%</span>
+                    </div>
+                    <div class="stat-group">
+                        <span class="stat-label">AUC-ROC</span>
+                        <span class="stat-value">0.88</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="model-name">Mediation Model</div>
+                    <div class="stat-group">
+                        <span class="stat-label">Accuracy</span>
+                        <span class="stat-value">77.1%</span>
+                    </div>
+                    <div class="stat-group">
+                        <span class="stat-label">AUC-ROC</span>
+                        <span class="stat-value">0.87</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-section">
+                <img src="/home/ubuntu/legal_literacy_justice_project/outputs/fairness/fairness_metrics_comparison.png" alt="Model Performance Comparison">
+            </div>
+            <div class="caption">Comparison of performance and fairness metrics across all three models.</div>
+        </div>
+    </div>
+</body>
+</html>

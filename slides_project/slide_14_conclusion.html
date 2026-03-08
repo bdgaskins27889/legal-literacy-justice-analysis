@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: flex-start; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 20px;
+            margin-bottom: 20px; /* reduced from 60px to save vertical space */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .content-wrapper {
+            padding-left: 100px;
+            padding-right: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* removed flex-grow to prevent stretching to fill extra space */
+        }
+
+        .manifesto-block {
+            text-align: center;
+            margin-bottom: 20px; /* reduced from 40px to save vertical space */
+            position: relative;
+        }
+
+        .manifesto-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-style: italic;
+            color: #1A1A1A;
+            line-height: 1.3;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .manifesto-text::before {
+            content: "“";
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 120px;
+            color: #F0F0F0;
+            position: absolute;
+            top: -40px; /* slightly reduced to avoid extra upward overflow */
+            left: -40px;
+            z-index: -1;
+        }
+
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px; /* slightly reduced gap to tighten layout */
+            border-top: 1px solid #E0E0E0;
+            padding-top: 10px; /* reduced from 20px */
+        }
+
+        .takeaway-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .takeaway-icon {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #800020;
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .takeaway-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>The Scales of Justice Can Be Recalibrated</h1>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="manifesto-block">
+                <div class="manifesto-text">
+                    Data science is not just a mirror reflecting the system's flaws—it is a lever for correcting them.
+                </div>
+            </div>
+
+            <div class="takeaways-grid">
+                <div class="takeaway-col">
+                    <div class="takeaway-icon">Acknowledge Bias</div>
+                    <div class="takeaway-text">
+                        We cannot fix what we do not measure. Rigorous auditing is the first step toward justice.
+                    </div>
+                </div>
+
+                <div class="takeaway-col">
+                    <div class="takeaway-icon">Design for Fairness</div>
+                    <div class="takeaway-text">
+                        Fairness must be an architectural input, not an afterthought. Models must be built to serve justice, not just accuracy.
+                    </div>
+                </div>
+
+                <div class="takeaway-col">
+                    <div class="takeaway-icon">Empower Reform</div>
+                    <div class="takeaway-text">
+                        Use data to arm public defenders and policymakers with the evidence needed to dismantle systemic inequities.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

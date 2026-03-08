@@ -1,0 +1,204 @@
+{
+  "project_info": {
+    "title": "The Scales of Justice",
+    "created": 1772399197.011397,
+    "last_updated": 1772399783.2686257,
+    "total_slides": 16
+  },
+  "slides": [
+    {
+      "id": "slide_1_title",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "slide_2_central_question",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "slide_3_dataset",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "slide_4_conceptual_framework",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "slide_5_finding_1",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "slide_6_finding_2",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "slide_7_methodology",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "slide_8_model_performance",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "slide_9_model_fairness",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "slide_10_why_fairer",
+      "state": "edited",
+      "pageNum": 10
+    },
+    {
+      "id": "slide_11_discussion",
+      "state": "edited",
+      "pageNum": 11
+    },
+    {
+      "id": "slide_12_policy_implications",
+      "state": "edited",
+      "pageNum": 12
+    },
+    {
+      "id": "slide_13_limitations",
+      "state": "edited",
+      "pageNum": 13
+    },
+    {
+      "id": "slide_14_conclusion",
+      "state": "edited",
+      "pageNum": 14
+    },
+    {
+      "id": "slide_15_qa",
+      "state": "edited",
+      "pageNum": 15
+    },
+    {
+      "id": "slide_16_references",
+      "state": "edited",
+      "pageNum": 16
+    }
+  ],
+  "outline": [
+    {
+      "id": "slide_1_title",
+      "title": "The Scales of Justice",
+      "summary": "Title slide with project details and author information.",
+      "image_plan": "/home/ubuntu/legal_literacy_justice_project/outputs/fig5_prison_rate_by_race.png - The scales of justice image is perfect for the title slide, aligning with the presentation's theme and visual note.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_2_central_question",
+      "title": "Equal Justice Under Law — But Is It Equal in Practice?",
+      "summary": "Introduction to the central research question regarding legal representation and sentencing.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_3_dataset",
+      "title": "A Comprehensive, Publicly Verifiable Dataset",
+      "summary": "Overview of the USSC FY 2024 dataset and key variables used.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_4_conceptual_framework",
+      "title": "Legal Representation Sits at the Crossroads of Race and Sentencing",
+      "summary": "Visual explanation of the mediation pathway model.",
+      "image_plan": "/home/ubuntu/legal_literacy_justice_project/outputs/whitepaper/fig5_conceptual_framework.png - Image 10 is a direct match for the 'Conceptual Framework Diagram' mentioned in the slide content.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_5_finding_1",
+      "title": "Hispanic Defendants Are Sentenced to Prison at a Rate 29% Higher Than White Defendants",
+      "summary": "Data visualization showing racial disparities in prison sentence rates.",
+      "image_plan": "/home/ubuntu/legal_literacy_justice_project/outputs/whitepaper/fig1_prison_rate_by_race.png - Image 9 is 'Figure 1 - Prison Sentence Rate by Race/Ethnicity bar chart' as referenced in the slide content.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_6_finding_2",
+      "title": "Defendants Without Private Attorneys Serve an Average of 35 More Months in Prison",
+      "summary": "Data visualization showing sentence length disparities by attorney type.",
+      "image_plan": "/home/ubuntu/legal_literacy_justice_project/outputs/models/roc_curve_prison.png - Image 2 shows average sentence length by attorney type, which directly supports the slide's content about attorney type predicting sentence length.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_7_methodology",
+      "title": "Three Distinct Models Tested for Both Accuracy and Fairness",
+      "summary": "Explanation of the three modeling approaches used (Logistic, Multilevel, Mediation).",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_8_model_performance",
+      "title": "All Three Models Achieve Strong Predictive Accuracy",
+      "summary": "Comparison of model accuracy and AUC-ROC scores.",
+      "image_plan": "/home/ubuntu/legal_literacy_justice_project/outputs/fairness/fairness_metrics_comparison.png - Image 3 is an ROC curve, which represents model performance and accuracy, aligning with the slide's content.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_9_model_fairness",
+      "title": "The Multilevel Model Is the Only Model to Pass the Standard Disparate Impact Test",
+      "summary": "Fairness metrics comparison showing the superiority of the Multilevel Model.",
+      "image_plan": "/home/ubuntu/legal_literacy_justice_project/outputs/fairness/summary_comparison_slide.png - Image 7 directly compares fairness metrics for Logistic Regression vs. Multilevel Model, which is the core of this slide.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_10_why_fairer",
+      "title": "Accounting for Geographic Context Reduces Racial Bias by Over 37%",
+      "summary": "Explanation of why the Multilevel Model is fairer (zip code justice).",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_11_discussion",
+      "title": "The Data Reveals a System Where Access to Counsel Shapes the Scales of Justice",
+      "summary": "Key discussion points on representation, bias, and model fairness.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_12_policy_implications",
+      "title": "Data-Driven Evidence Supports Three Actionable Policy Reforms",
+      "summary": "Three concrete policy recommendations based on findings.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_13_limitations",
+      "title": "This Study Is a Foundation, Not a Final Word",
+      "summary": "Discussion of study limitations and future research directions.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_14_conclusion",
+      "title": "The Scales of Justice Can Be Recalibrated",
+      "summary": "Concluding thoughts on the role of data science in justice reform.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_15_qa",
+      "title": "Anticipated Questions",
+      "summary": "List of anticipated audience questions for Q&A session.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_16_references",
+      "title": "References & Data Availability",
+      "summary": "Data sources, code repository info, and reproducibility statement.",
+      "image_plan": "",
+      "slide_template_key": ""
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dataset</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* do not change */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 20px;
+            margin-bottom: 18px; /* trimmed more to save height */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #4A4A4A;
+            margin-top: 10px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px; /* reduced from 40px to save height */
+            padding-left: 60px;
+            padding-right: 60px;
+            flex-grow: 1;
+        }
+
+        .column-header {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #800020;
+            text-transform: uppercase;
+            margin-bottom: 12px; /* reduced */
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 4px; /* reduced */
+        }
+
+        /* Table Styling */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 20px;
+        }
+
+        .data-table td {
+            padding: 8px 0; /* reduced from 12px */
+            border-bottom: 1px solid #F0F0F0;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .attribute-label {
+            font-weight: 600;
+            color: #4A4A4A;
+        }
+
+        .attribute-value {
+            text-align: right;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: #1A1A1A;
+        }
+
+        /* List Styling */
+        .variable-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .variable-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px; /* reduced from 12px */
+            font-size: 20px; /* must not change */
+            color: #1A1A1A;
+            background-color: #F9F9F9;
+            padding: 6px 12px; /* reduced from 10px 16px */
+            border-left: 4px solid #1A1A1A;
+        }
+
+        .variable-item:nth-child(odd) {
+            border-left-color: #800020;
+        }
+
+        .code-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 16px;
+            color: #800020;
+            background-color: #FFFFFF;
+            padding: 4px 8px;
+            border: 1px solid #E0E0E0;
+            margin-left: auto;
+            font-weight: 700;
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 60px; /* moved up from 20px to avoid bottom overflow */
+            right: 60px;
+            border: 2px solid #1A1A1A;
+            padding: 8px 16px; /* slightly reduced */
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #1A1A1A;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>A Comprehensive, Publicly Verifiable Dataset</h1>
+            <h2>From the U.S. Sentencing Commission</h2>
+        </div>
+
+        <div class="content-grid">
+            <div class="left-col">
+                <div class="column-header">Dataset Attributes</div>
+                <table class="data-table">
+                    <tr>
+                        <td class="attribute-label">Source</td>
+                        <td class="attribute-value">U.S. Sentencing Commission</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute-label">Fiscal Year</td>
+                        <td class="attribute-value">2024</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute-label">Total Cases</td>
+                        <td class="attribute-value">61,679</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute-label">Variables Available</td>
+                        <td class="attribute-value">27,000+</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute-label">Key Variables Used</td>
+                        <td class="attribute-value">23</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="right-col">
+                <div class="column-header">Key Variables Selected</div>
+                <ul class="variable-list">
+                    <li class="variable-item">
+                        Race/Ethnicity
+                        <span class="code-tag">NEWRACE</span>
+                    </li>
+                    <li class="variable-item">
+                        Age at Sentencing
+                        <span class="code-tag">AGE</span>
+                    </li>
+                    <li class="variable-item">
+                        Criminal History Score
+                        <span class="code-tag">CRIMINAL_HISTORY</span>
+                    </li>
+                    <li class="variable-item">
+                        Type of Legal Counsel
+                        <span class="code-tag">TYPEMONY</span>
+                    </li>
+                    <li class="variable-item">
+                        Federal District
+                        <span class="code-tag">DISTRICT</span>
+                    </li>
+                    <li class="variable-item">
+                        Prison Sentence Outcome
+                        <span class="code-tag">PRISDUM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="verified-badge">
+            <i class="fas fa-check-circle"></i> Publicly Verifiable
+        </div>
+    </div>
+</body>
+</html>

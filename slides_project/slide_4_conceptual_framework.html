@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptual Framework</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep this as required */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* keep title top padding */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 40px;
+            padding-right: 40px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 20px;
+            margin-bottom: 16px; /* slightly reduced to save vertical space */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        /* Refresh layout: put the highlight box in the right column above the image so columns are more balanced */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 420px 1fr;
+            gap: 18px; /* reduced gap */
+            padding-left: 40px;
+            padding-right: 40px;
+            flex-grow: 1;
+            align-items: start;
+        }
+
+        .text-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* reduced inner gap */
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #800020;
+            font-style: italic;
+            border-left: 4px solid #1A1A1A;
+            padding-left: 15px;
+        }
+
+        .component-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* reduced gap */
+        }
+
+        .component-item { display: flex; flex-direction: column; }
+
+        .component-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .component-desc {
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.4;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* small gap between highlight and image */
+            align-items: center;
+            justify-content: flex-start;
+            padding-bottom: 6px; /* minimal */
+        }
+
+        .highlight-box {
+            background-color: #F9F9F9;
+            padding: 10px; /* slightly reduced padding */
+            border-top: 4px solid #800020;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #1A1A1A;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .framework-image {
+            width: 100%;
+            max-height: 320px; /* reduced to help overall height */
+            object-fit: contain;
+            border: 1px solid #E0E0E0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Legal Representation Sits at the Crossroads of Race and Sentencing</h1>
+        </div>
+
+        <div class="content-grid">
+            <div class="text-column">
+                <div class="section-title">The Mediation Model</div>
+
+                <ul class="component-list">
+                    <li class="component-item">
+                        <span class="component-label">1. Independent Variable</span>
+                        <span class="component-desc">Race and demographic characteristics</span>
+                    </li>
+                    <li class="component-item">
+                        <span class="component-label">2. Mediator</span>
+                        <span class="component-desc">Type of legal representation</span>
+                    </li>
+                    <li class="component-item">
+                        <span class="component-label">3. Outcome</span>
+                        <span class="component-desc">Prison sentence (yes/no) and sentence length</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right-column">
+                <div class="highlight-box">
+                    <strong>Analysis Goal:</strong><br>
+                    To isolate the <em>indirect effect</em> of race operating through representation from the <em>direct effect</em>.
+                </div>
+                <img src="/home/ubuntu/legal_literacy_justice_project/outputs/whitepaper/fig5_conceptual_framework.png" alt="Conceptual Framework Diagram" class="framework-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

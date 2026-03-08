@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why It Is Fairer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* keep upper padding of title */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 20px;
+            margin-bottom: 30px; /* slightly reduced to save vertical space */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px; /* reduced gap */
+            padding-left: 60px;
+            padding-right: 60px;
+            flex-grow: 1;
+            align-items: start;
+        }
+
+        .stat-column {
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #E0E0E0;
+            padding-right: 24px;
+        }
+
+        .hero-stat {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 120px;
+            color: #800020;
+            line-height: 0.9;
+            font-weight: 700;
+            letter-spacing: -4px;
+            margin-bottom: 8px; /* reduced spacing */
+        }
+
+        .stat-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 8px; /* reduced spacing */
+        }
+
+        .stat-note {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid #E0E0E0;
+            padding-top: 12px; /* slightly reduced */
+        }
+
+        .logic-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* reduced vertical gaps between logic blocks */
+        }
+
+        .logic-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .block-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            color: #800020;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .block-title::before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: #800020;
+        }
+
+        .block-content {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            color: #4A4A4A;
+            line-height: 1.3; /* reduced line-height to save vertical space */
+        }
+
+        .highlight-phrase {
+            font-weight: 600;
+            color: #1A1A1A;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Accounting for Geographic Context Reduces Racial Bias by Over 37%</h1>
+        </div>
+
+        <div class="content-grid">
+            <div class="stat-column">
+                <div class="hero-stat">37%</div>
+                <div class="stat-label">Reduction in Disparate Impact</div>
+                <div class="stat-note">
+                    Validated via Permutation Test<br>
+                    (p &lt; 0.001)
+                </div>
+            </div>
+
+            <div class="logic-column">
+                <div class="logic-block">
+                    <div class="block-title">The Problem: "Zip Code Justice"</div>
+                    <div class="block-content">
+                        Standard models treat all federal districts as identical. However, some districts are systematically harsher. Because racial demographics vary by district, <span class="highlight-phrase">standard models often mistake a district's harshness for a racial correlation.</span>
+                    </div>
+                </div>
+
+                <div class="logic-block">
+                    <div class="block-title">The Solution: Multilevel Modeling</div>
+                    <div class="block-content">
+                        By "nesting" cases within their districts, the Multilevel Model separates the <span class="highlight-phrase">local baseline</span> from the <span class="highlight-phrase">individual case factors</span>. It learns to judge the defendant relative to their specific jurisdiction.
+                    </div>
+                </div>
+
+                <div class="logic-block">
+                    <div class="block-title">The Result</div>
+                    <div class="block-content">
+                        The model stops penalizing defendants for the systemic biases of their location, resulting in significantly fairer predictions without sacrificing accuracy.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

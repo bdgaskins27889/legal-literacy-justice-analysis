@@ -1,0 +1,15 @@
+# Raw data (too large for GitHub)
+data/opafy24nid.csv
+data/*.csv
+*.tar.gz
+*.zip
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Temporary files
+/tmp/
+*.tmp

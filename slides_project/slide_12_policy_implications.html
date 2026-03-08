@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Implications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* must keep title upper padding */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 20px;
+            margin-bottom: 20px; /* reduced to save height */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0; /* Gaps handled by padding/borders */
+            padding-left: 60px;
+            padding-right: 60px;
+            flex-grow: 1;
+            align-items: start;
+        }
+
+        .reform-col {
+            display: flex;
+            flex-direction: column;
+            padding-right: 20px; /* slightly reduced */
+            padding-left: 20px; /* slightly reduced */
+            border-right: 1px solid #E0E0E0;
+        }
+
+        .reform-col:first-child {
+            padding-left: 0;
+        }
+
+        .reform-col:last-child {
+            padding-right: 0;
+            border-right: none;
+        }
+
+        .reform-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 96px;
+            color: #800020;
+            line-height: 0.8;
+            font-weight: 700;
+            margin-bottom: 10px; /* reduced from 30 */
+            opacity: 1;
+        }
+
+        .reform-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 26px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            line-height: 1.2;
+            min-height: 48px; /* reduced from 64 to save space */
+        }
+
+        .reform-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.6;
+            margin-bottom: 8px; /* slight reduction */
+        }
+
+        .target-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+            background-color: #1A1A1A;
+            padding: 8px 12px; /* slightly reduced to save height */
+            align-self: flex-start;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Data-Driven Evidence Supports Three Actionable Policy Reforms</h1>
+        </div>
+
+        <div class="content-grid">
+            <!-- Reform 1 -->
+            <div class="reform-col">
+                <div class="reform-number">01</div>
+                <div class="reform-title">Mandatory Fairness Audits</div>
+                <div class="reform-text">
+                    Require all predictive algorithms used in sentencing to pass the "80% Rule" for disparate impact before deployment. Tools that fail—like the standard logistic model—must be rejected or recalibrated.
+                </div>
+                <div class="target-tag">Target: Algorithmic Accountability</div>
+            </div>
+
+            <!-- Reform 2 (shortened to save vertical space) -->
+            <div class="reform-col">
+                <div class="reform-number">02</div>
+                <div class="reform-title">Context-Aware Sentencing</div>
+                <div class="reform-text">
+                    Include district-level context so judges can separate individual culpability from systemic geographic severity.
+                </div>
+                <div class="target-tag">Target: Judicial Consistency</div>
+            </div>
+
+            <!-- Reform 3 -->
+            <div class="reform-col">
+                <div class="reform-number">03</div>
+                <div class="reform-title">Public Defense Parity</div>
+                <div class="reform-text">
+                    Address the "Representation Gap" by tying public defender funding to prosecution budgets. Reducing the resource disparity is the most direct way to sever the link between race, poverty, and outcome.
+                </div>
+                <div class="target-tag">Target: Procedural Justice</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

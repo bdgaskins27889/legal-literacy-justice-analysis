@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References & Data Availability</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: flex-start; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep per requirement */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* title top padding must remain */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 20px;
+            margin-bottom: 10px; /* reduced to save vertical space */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 18px; /* reduced gap */
+            padding-left: 60px;
+            padding-right: 60px;
+            align-items: start;
+        }
+
+        .ref-col {
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid #1A1A1A;
+            padding-top: 8px; /* reduced inner padding */
+        }
+
+        .ref-col:nth-child(2) {
+            border-top-color: #800020;
+        }
+
+        .col-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .citation-block {
+            margin-bottom: 12px; /* reduced to save height */
+        }
+
+        .citation-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .citation-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #4A4A4A;
+            line-height: 1.5;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background-color: #F0F0F0;
+            color: #1A1A1A;
+            padding: 4px 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .verified-badge {
+            border: 1px solid #2E7D32;
+            color: #2E7D32;
+            padding: 10px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-top: 6px; /* reduced */
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>References & Data Availability</h1>
+        </div>
+
+        <div class="content-grid">
+            <!-- Data Source -->
+            <div class="ref-col">
+                <div class="col-title">Data Source</div>
+                <div class="citation-block">
+                    <div class="citation-label">Primary Dataset</div>
+                    <div class="citation-text">
+                        United States Sentencing Commission. (2024). <em>Fiscal Year 2024 Individual Offender Datafile</em>. Washington, DC: Office of Research and Data.
+                    </div>
+                </div>
+                <div class="citation-block">
+                    <div class="citation-label">Access</div>
+                    <div class="citation-text">Publicly available via USSC.gov. No restricted use agreement required for replication.</div>
+                </div>
+            </div>
+
+            <!-- Code & Tools -->
+            <div class="ref-col">
+                <div class="col-title">Code & Tools</div>
+                <div class="citation-block">
+                    <div class="citation-label">Analysis Stack</div>
+                    <div class="citation-text" style="margin-bottom: 8px;">
+                        <span class="tech-tag">Python 3.11</span>
+                        <span class="tech-tag">Scikit-Learn</span>
+                        <span class="tech-tag">Statsmodels</span>
+                    </div>
+                </div>
+                <div class="citation-block">
+                    <div class="citation-label">Repository</div>
+                    <div class="citation-text">Full source code, including data cleaning, model training, and fairness auditing scripts, is available in the project GitHub repository.</div>
+                </div>
+            </div>
+
+            <!-- Reproducibility -->
+            <div class="ref-col">
+                <div class="col-title">Reproducibility</div>
+                <div class="citation-block">
+                    <div class="citation-label">Methodology</div>
+                    <div class="citation-text">All analyses use fixed random seeds (42) for deterministic results. An automated verification script is included to re-run all statistical tests and validate findings against the raw data.</div>
+                </div>
+                <div class="verified-badge">✓ Independently Verified</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

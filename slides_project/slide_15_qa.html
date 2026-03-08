@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anticipated Questions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* must keep */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* keep title top padding */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 20px;
+            margin-bottom: 12px; /* reduced to save vertical space */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px; /* reduced gap */
+            padding-left: 60px;
+            padding-right: 60px;
+            align-items: start;
+            align-content: start; /* prevent stretching */
+            padding-bottom: 12px; /* reduced */
+        }
+
+        .question-block {
+            display: flex;
+            flex-direction: column;
+            border-left: 4px solid #E0E0E0;
+            padding-left: 20px;
+        }
+
+        .question-block:hover {
+            border-left-color: #800020;
+        }
+
+        .q-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px; /* reduced */
+        }
+
+        .q-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #800020;
+            font-weight: 700;
+        }
+
+        .q-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            background-color: #F5F5F5;
+            padding: 4px 8px;
+        }
+
+        .q-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            color: #1A1A1A;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        .q-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #666;
+            margin-top: 4px; /* reduced */
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Anticipated Questions & Discussion Points</h1>
+        </div>
+
+        <div class="content-grid">
+            <!-- Q1 -->
+            <div class="question-block">
+                <div class="q-meta">
+                    <span class="q-number">Q1</span>
+                    <span class="q-tag">Data Bias</span>
+                </div>
+                <div class="q-text">If historical data is biased, will the model repeat that bias?</div>
+                <div class="q-sub">Mitigation: fairness constraints, remove direct race features.</div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="question-block">
+                <div class="q-meta">
+                    <span class="q-number">Q2</span>
+                    <span class="q-tag">Causality</span>
+                </div>
+                <div class="q-text">Does attorney type cause outcomes or act as a proxy?</div>
+                <div class="q-sub">Controlled for offense level and history.</div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="question-block">
+                <div class="q-meta">
+                    <span class="q-number">Q3</span>
+                    <span class="q-tag">Generalizability</span>
+                </div>
+                <div class="q-text">Are federal findings applicable to state/local courts?</div>
+                <div class="q-sub">Limitations: may underestimate state-level effects.</div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="question-block">
+                <div class="q-meta">
+                    <span class="q-number">Q4</span>
+                    <span class="q-tag">Metric Selection</span>
+                </div>
+                <div class="q-text">Why prioritize the 80% rule over accuracy?</div>
+                <div class="q-sub">See fairness trade-off discussion.</div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="question-block">
+                <div class="q-meta">
+                    <span class="q-number">Q5</span>
+                    <span class="q-tag">Implementation</span>
+                </div>
+                <div class="q-text">Is the multilevel model feasible for courts?</div>
+                <div class="q-sub">Modern compute power makes it feasible.</div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="question-block">
+                <div class="q-meta">
+                    <span class="q-number">Q6</span>
+                    <span class="q-tag">Ethics</span>
+                </div>
+                <div class="q-text">Should algorithms play any role in sentencing?</div>
+                <div class="q-sub">Recommendation: keep human-in-the-loop.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

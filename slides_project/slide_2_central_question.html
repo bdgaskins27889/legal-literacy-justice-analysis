@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Central Question</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            padding-top: 60px; /* keep upper padding */
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 10px; /* reduced */
+            margin-bottom: 10px;  /* reduced to save height */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px; /* reduced horizontal gap (also helps layout) */
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        .context-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* reduced vertical gaps between context items */
+        }
+
+        .stat-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 64px;
+            color: #800020;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            margin-top: 6px; /* reduced */
+            line-height: 1.4;
+        }
+
+        .question-column {
+            background-color: #F9F9F9;
+            padding: 20px; /* reduced */
+            border-left: 8px solid #800020;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .question-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #800020;
+            margin-bottom: 12px; /* reduced */
+            font-weight: 600;
+        }
+
+        .core-question {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            line-height: 1.2;
+        }
+
+        .quote-container {
+            padding: 6px 40px; /* reduced vertical padding to save height */
+            margin-top: 0; /* removed extra gap to shave height */
+            background-color: #1A1A1A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 32px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 20px;
+            color: #1A1A1A;
+            line-height: 1.5;
+        }
+        
+        .bullet {
+            color: #800020;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Equal Justice Under Law — But Is It Equal in Practice?</h1>
+        </div>
+
+        <div class="content-grid">
+            <div class="context-column">
+                <div class="list-item">
+                    <span class="bullet">►</span>
+                    <span>The Sixth Amendment guarantees the right to counsel, but not the right to <strong>equal</strong> counsel.</span>
+                </div>
+                
+                <div class="stat-block">
+                    <span class="stat-number">80%</span>
+                    <span class="stat-label">of criminal defendants in the U.S. rely on court-appointed public defenders.</span>
+                </div>
+
+                <div class="stat-block">
+                    <span class="stat-number">300–500</span>
+                    <span class="stat-label">cases per year for public defenders — far exceeding the ABA recommendation of 150.</span>
+                </div>
+            </div>
+
+            <div class="question-column">
+                <div class="question-label">The Central Question</div>
+                <div class="core-question">Does the type of legal representation predict the severity of a federal sentence?</div>
+            </div>
+        </div>
+
+        <div class="quote-container">
+            <div class="quote">"The quality of justice a person receives should not depend on the size of their wallet."</div>
+        </div>
+    </div>
+</body>
+</html>

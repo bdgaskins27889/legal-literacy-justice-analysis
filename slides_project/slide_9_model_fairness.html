@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Fairness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* do NOT change - title top padding must stay */
+            display: flex;
+            flex-direction: column;
+        }
+.header {
+            padding-left: 32px;
+            padding-right: 32px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 16px;
+            margin-bottom: 8px; /* tightened to save vertical space */
+        }
+h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+.content-grid {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 16px; /* reduced to tighten layout */
+            padding-left: 32px;
+            padding-right: 32px;
+            flex-grow: 1;
+            align-items: start;
+        }
+.verdict-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* reduced inner gaps */
+        }
+.rule-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 8px;
+        }
+.status-block {
+            display: flex;
+            flex-direction: column;
+            padding: 10px; /* reduced padding */
+            border-left: 8px solid #ccc;
+            background-color: #FAFAFA;
+        }
+.status-block.fail {
+            border-left-color: #800020;
+            background-color: #FFF0F0;
+        }
+.status-block.pass {
+            border-left-color: #2E7D32;
+            background-color: #F0FFF4;
+        }
+.model-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #1A1A1A;
+            margin-bottom: 6px;
+        }
+.status-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+.fail .status-text { color: #800020; }
+        .pass .status-text { color: #2E7D32; }
+.score-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            color: #4A4A4A;
+        }
+/* Shrink the graphic area to ensure overall page fits under 720px */
+        .image-container {
+            height: 260px; /* reduced to bring overall height under limit */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            padding: 8px;
+        }
+img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+</style>
+</head>
+<body><div class="slide-container">
+        <div class="header">
+            <h1>The Multilevel Model Is the Only Model to Pass the Standard Disparate Impact Test</h1>
+        </div>
+<div class="content-grid">
+            <div class="verdict-column">
+                <div class="rule-label">The 80% Rule Verdict</div>
+<div class="status-block fail">
+                    <span class="model-name">Logistic Regression</span>
+                    <span class="status-text">FAIL</span>
+                    <span class="score-text">Ratio: 0.706</span>
+                </div>
+<div class="status-block pass">
+                    <span class="model-name">Multilevel Model</span>
+                    <span class="status-text">PASS</span>
+                    <span class="score-text">Ratio: 0.816</span>
+                </div>
+            </div>
+<div class="image-container" style="transform: translate(0px, 13px);">
+                <ms-img style="position: relative; transform: translate(38.059659px, 102.382806px) matrix(1, 0, 0, 1, -38.05962, 31.007813); z-index: auto; width: 835.766927px; height: 544.81091px; min-width: 835.766927px; min-height: 544.81091px; max-width: 835.766927px; max-height: 544.81091px; margin: 0px; vertical-align: baseline; overflow: hidden; display: inline-block; padding: 0px; border: medium; box-sizing: border-box; opacity: 1;"><img src="/home/ubuntu/legal_literacy_justice_project/outputs/fairness/summary_comparison_slide.png" alt="Fairness Metrics Comparison" draggable="false" style="position: absolute; left: 0.017193px; top: 0px; width: 835.732534px; height: 544.833317px; min-width: 835.732534px; min-height: 544.833317px; max-width: 835.732534px; max-height: 544.833317px; object-fit: fill; object-position: 0px 0px; margin: 0px; padding: 0px; border: medium; box-sizing: border-box; display: block; opacity: 1;"></ms-img>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

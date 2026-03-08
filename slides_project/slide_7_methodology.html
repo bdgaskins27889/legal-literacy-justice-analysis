@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology: Three Models</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep this per requirements */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* do not change title upper padding */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 10px; /* reduced to save vertical space */
+            margin-bottom: 10px; /* reduced to save vertical space */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px; /* reduced gap */
+            padding-left: 60px;
+            padding-right: 60px;
+            align-items: start;
+        }
+
+        .model-column {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #E0E0E0;
+            padding-top: 6px; /* reduced inner padding */
+        }
+
+        .model-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 80px;
+            color: #800020;
+            line-height: 1;
+            font-weight: 700;
+            margin-bottom: 6px; /* reduced spacing */
+            opacity: 0.2;
+        }
+
+        .model-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .model-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.4;
+            margin-bottom: 8px; /* reduced spacing */
+        }
+
+        .feature-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+            background-color: #1A1A1A;
+            padding: 6px 10px; /* slightly reduced padding */
+            align-self: flex-start;
+            font-weight: 700;
+        }
+
+        /* Specific accent for the middle column to create rhythm */
+        .model-column:nth-child(2) .model-number {
+            opacity: 1; /* Highlight the main model */
+        }
+
+        .model-column:nth-child(2) .feature-tag {
+            background-color: #800020; /* Highlight the main model tag */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Three Distinct Models Tested for Both Accuracy and Fairness</h1>
+        </div>
+
+        <div class="content-grid">
+            <!-- Model 1 -->
+            <div class="model-column">
+                <div class="model-number">01</div>
+                <div class="model-title">Logistic Regression</div>
+                <div class="model-desc">Baseline statistical model testing relationships between race, counsel type, and sentencing outcomes.</div>
+                <div class="feature-tag">Standard Approach</div>
+            </div>
+
+            <!-- Model 2 -->
+            <div class="model-column">
+                <div class="model-number">02</div>
+                <div class="model-title">Multilevel Model</div>
+                <div class="model-desc">Hierarchical model nesting cases by federal district to account for local judicial variation.</div>
+                <div class="feature-tag">Context-Aware</div>
+            </div>
+
+            <!-- Model 3 -->
+            <div class="model-column">
+                <div class="model-number">03</div>
+                <div class="model-title">Mediation Analysis</div>
+                <div class="model-desc">Causal pathway analysis isolating how much racial disparity flows indirectly through attorney type.</div>
+                <div class="feature-tag">Causal Pathway</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding 1: Racial Disparities</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* keep upper padding of the title unchanged */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 40px;
+            padding-right: 40px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 8px; /* reduced to save vertical space */
+            margin-bottom: 16px; /* tightened spacing below header */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px; /* keep font size */
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 20px; /* tightened gap between columns */
+            padding-left: 40px;
+            padding-right: 40px;
+            flex-grow: 1;
+            align-items: start;
+        }
+
+        .stats-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* reduced gap between stat items */
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            padding: 6px 0; /* reduced inner padding */
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .stat-item.highlight {
+            background-color: #F9F9F9;
+            border-left: 4px solid #800020;
+            padding-left: 12px;
+            padding-right: 12px;
+            margin-left: -16px; /* compensate for padding/border to align text */
+            border-bottom: none;
+        }
+
+        .stat-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px; /* font sizes must not be reduced */
+            font-weight: 700;
+            color: #1A1A1A;
+            line-height: 1;
+        }
+
+        .stat-item.highlight .stat-value {
+            color: #800020;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center; /* keep horizontal centering */
+            align-items: flex-start; /* avoid adding vertical extra space */
+            background-color: #FAFAFA;
+            border: 1px solid #E0E0E0;
+            padding: 8px; /* reduced padding */
+            box-sizing: border-box;
+            align-self: start; /* let container size to its content */
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 360px; /* keep reasonable max height */
+            object-fit: contain;
+            display: block;
+        }
+
+        .note {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Hispanic Defendants Are Sentenced to Prison at a Rate 29% Higher Than White Defendants</h1>
+        </div>
+
+        <div class="content-grid">
+            <div class="stats-list">
+                <div class="stat-item">
+                    <span class="stat-label">White (Non-Hispanic)</span>
+                    <span class="stat-value">72.4%</span>
+                </div>
+                <div class="stat-item highlight">
+                    <span class="stat-label">Hispanic</span>
+                    <span class="stat-value">93.1%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Black (Non-Hispanic)</span>
+                    <span class="stat-value">88.6%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Other</span>
+                    <span class="stat-value">78.2%</span>
+                </div>
+                <div class="stat-item" style="border-bottom: none; margin-top: 6px;">
+                    <span class="stat-label">Overall Average</span>
+                    <span class="stat-value" style="font-size: 24px; color: #666;">83.1%</span>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="/home/ubuntu/legal_literacy_justice_project/outputs/whitepaper/fig1_prison_rate_by_race.png" alt="Prison Sentence Rate by Race/Ethnicity">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

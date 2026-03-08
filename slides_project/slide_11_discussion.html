@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep as required */
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding-top: 60px; /* do not change */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding-left: 60px;
+            padding-right: 60px;
+            border-bottom: 2px solid #1A1A1A;
+            padding-bottom: 16px;
+            margin-bottom: 20px; /* trimmed to save vertical space */
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+            line-height: 1.1;
+            max-width: 90%;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px; /* tighter grid */
+            padding-left: 60px;
+            padding-right: 60px;
+            align-items: start;
+        }
+
+        .discussion-col {
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid #1A1A1A;
+            padding-top: 8px; /* reduced */
+        }
+
+        .discussion-col:nth-child(2) {
+            border-top-color: #800020;
+        }
+
+        .col-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #1A1A1A;
+            text-transform: uppercase;
+            margin-bottom: 8px; /* reduced */
+            line-height: 1.2;
+        }
+
+        .col-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.6;
+            margin-bottom: 8px; /* reduced */
+        }
+
+        .implication-box {
+            background-color: #F9F9F9;
+            padding: 8px; /* reduced */
+            border-left: 2px solid #1A1A1A;
+        }
+
+        .implication-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #800020;
+            margin-bottom: 6px;
+            display: block;
+            font-weight: 700;
+        }
+
+        .implication-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-style: italic;
+            color: #1A1A1A;
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>The Data Reveals a System Where Access to Counsel Shapes the Scales of Justice</h1>
+        </div>
+
+        <div class="content-grid">
+            <!-- Point 1 -->
+            <div class="discussion-col">
+                <div class="col-title">The Representation Gap</div>
+                <div class="col-text">
+                    Private counsel consistently secures better outcomes, but access is largely determined by economic and racial divisions.
+                </div>
+                <div class="implication-box">
+                    <span class="implication-label">Implication</span>
+                    <span class="implication-text">Representation powerfully amplifies existing racial disparities.</span>
+                </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="discussion-col">
+                <div class="col-title">The Context Deficit</div>
+                <div class="col-text">
+                    Local judicial culture matters: accounting for district-level effects uncovers geographically rooted bias.
+                </div>
+                <div class="implication-box">
+                    <span class="implication-label">Implication</span>
+                    <span class="implication-text">"Zip code justice" is a tangible factor in fairness assessments.</span>
+                </div>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="discussion-col">
+                <div class="col-title">The Fairness Trade-off</div>
+                <div class="col-text">
+                    Accuracy and demographic fairness do not automatically align; design choices determine which we prioritize.
+                </div>
+                <div class="implication-box">
+                    <span class="implication-label">Implication</span>
+                    <span class="implication-text">Maximizing accuracy without safeguards can increase systemic bias.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
