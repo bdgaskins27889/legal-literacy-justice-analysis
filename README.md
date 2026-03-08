@@ -278,7 +278,7 @@ If you use this work, please cite:
 @mastersthesis{gaskins2026scales,
   author = {Gaskins, Barbara D.},
   title = {The Scales of Justice: An Analysis of Representation and Sentencing Outcomes in U.S. Federal Courts},
-  school = {[Your University]},
+  school = {Bellevue University},
   year = {2026},
   type = {Master's Portfolio Project},
   note = {Data source: U.S. Sentencing Commission, Individual Offender Datafiles, FY 2024}
